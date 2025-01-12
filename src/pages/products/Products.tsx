@@ -1,6 +1,6 @@
 import { request } from "@/api";
 import CreateCS from "@/components/create-cs/CreateCS";
-import { Box, Button, Skeleton, TablePagination, Typography } from "@mui/material";
+import { Box, Button, Skeleton, TablePagination } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import ProductTable from "@/components/productTable/productTable";
