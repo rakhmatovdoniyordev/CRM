@@ -25,7 +25,7 @@ const Customer = () => {
 
   const [open, setOpen] = useState<null | string>(null);
   const { data, isLoading } = useQuery({
-    queryKey: ["customers", { page, rowsPerPage }],
+    queryKey: ["customer", { page, rowsPerPage }],
     queryFn: () => request.get("/get/customers", {
       params: {
         skip: page,
@@ -44,7 +44,7 @@ const Customer = () => {
         </Typography>
         <Button onClick={() => setOpen("customer")}>Create</Button>
       </Box>
-      <Table data={data?.innerData} isLoading={isLoading} />
+      <Table data={data?.innerData} isLoading={isLoading} queryKey={"customer"}/>
       <div className="flex justify-end">
       {isLoading ? (
           <Skeleton

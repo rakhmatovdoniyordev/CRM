@@ -42,7 +42,7 @@ const Seller = () => {
         </Typography>
         <Button onClick={() => setOpen("seller")}>Create</Button>
       </Box>
-      <Table data={data?.innerData} isLoading={isLoading}/>
+      <Table data={data?.innerData} isLoading={isLoading} queryKey={"seller"}/>
       <div>
         <TablePagination
           component="div"

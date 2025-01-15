@@ -5,6 +5,11 @@ export interface ICustomer {
     phone_primary: string;
     budget: number;
     address: string;
+    pin: boolean;
+    isPaidToday: string;
+    sellerId: string;
+    amount: number;
+    comment: string;
 }
 
 export interface IProducts {
